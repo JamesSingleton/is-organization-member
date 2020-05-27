@@ -1,0 +1,36 @@
+{
+  "name": "is-organization-member",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Check is a user is a member of an organization.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "build": "ncc build src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesSingleton/is-organization-member.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript",
+    "Organization Member"
+  ],
+  "author": "GitHub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JamesSingleton/is-organization-member/issues"
+  },
+  "homepage": "https://github.com/JamesSingleton/is-organization-member#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.2.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "eslint": "^7.1.0",
+    "jest": "^26.0.1"
+  }
+}
