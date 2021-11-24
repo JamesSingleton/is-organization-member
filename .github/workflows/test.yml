@@ -1,10 +1,10 @@
-name: 'Test Action'
+name: "Test Action"
 on:
   pull_request:
   push:
     branches:
-      - master
-      - 'releases/*'
+      - main
+      - "releases/*"
 
 jobs:
   # test action works running from the graph
