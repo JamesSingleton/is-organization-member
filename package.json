@@ -1,6 +1,6 @@
 {
   "name": "is-organization-member",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Check is a user is a member of an organization.",
   "main": "dist/index.js",
