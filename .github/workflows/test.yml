@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Log Result
         run: |
-          result=${{steps.is_organization_member.outputs.result}}
+          result=${{steps.is_organization_member_zendesk.outputs.result}}
           echo "$result"
       - uses: actions/checkout@v2
       - uses: ./
@@ -31,5 +31,5 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Log Result
         run: |
-          result=${{steps.is_organization_member.outputs.result}}
+          result=${{steps.is_organization_member_amex.outputs.result}}
           echo "$result"
