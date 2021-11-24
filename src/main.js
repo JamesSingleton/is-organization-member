@@ -10,7 +10,7 @@ const organization = core.getInput("organization", { required: true });
 const username = core.getInput("username", { required: true });
 const token = core.getInput("token", { required: true });
 
-const octokit = new github.GitHub(token);
+const octokit = new github.getOctokit(token);
 
 main();
 
