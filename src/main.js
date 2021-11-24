@@ -16,7 +16,7 @@ main();
 
 async function main() {
   const { data: orgs } = checkStatus(
-    await octokit.orgs.listForUser({ username, per_page: 100 })
+    await octokit.rest.orgs.listForUser({ username, per_page: 100 })
   );
 
   const isMember = orgs.some(({ login }) => login === organization);
