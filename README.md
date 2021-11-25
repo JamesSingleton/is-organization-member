@@ -31,3 +31,9 @@ jobs:
           steps.is_organization_member.outputs.result == false
         run: echo User Does Not Belong to testorg
 ```
+
+> **Note:** In order to check whether a member is part of the organization
+> or not, the members **must** have their "Organization Visibility" set to
+> Public.
+> In order to ensure your "Organization Visibility" is correct, please,
+> check https://github.com/orgs/**your_organization**/people.
