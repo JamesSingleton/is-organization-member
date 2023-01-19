@@ -28,7 +28,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Comment
         if: |
-          steps.is_organization_member.outputs.result == false
+          ${{ steps.is_organization_member.outputs.result == 'false' }}
         run: echo User Does Not Belong to testorg
 ```
 
