@@ -21,14 +21,14 @@ jobs:
       - name: Check if organization member
         id: is_organization_member
         if: github.event.action == 'opened'
-        uses: jamessingleton/is-organization-member@v1
+        uses: JamesSingleton/is-organization-member@1.0.0
         with:
           organization: testorg
           username: ${{ github.event.issue.user.login }}
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Comment
         if: |
-          steps.is_organization_member.outputs.result == false
+          ${{ steps.is_organization_member.outputs.result == 'false' }}
         run: echo User Does Not Belong to testorg
 ```
 
