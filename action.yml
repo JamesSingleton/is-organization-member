@@ -15,7 +15,7 @@ outputs:
   result: # output will be available to future steps
     description: "The result in either true or false"
 runs:
-  using: "node18"
+  using: "node20"
   main: "dist/index.js"
 branding:
   icon: "user-check"
