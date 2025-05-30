@@ -11,7 +11,7 @@ jobs:
   test-action:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ./
         id: is_organization_member_zendesk
         with:
@@ -22,7 +22,7 @@ jobs:
         run: |
           result=${{steps.is_organization_member_zendesk.outputs.result}}
           echo "$result"
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: ./
         id: is_organization_member_amex
         with:
