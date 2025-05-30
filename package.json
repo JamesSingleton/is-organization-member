@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "lint": "eslint src",
-    "build": "ncc build src/main.js"
+    "build": "ncc build src/main.cjs"
   },
   "repository": {
     "type": "git",
