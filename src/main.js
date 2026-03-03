@@ -15,9 +15,18 @@ const octokit = new github.getOctokit(token);
 main();
 
 async function main() {
-  const { data: orgs } = checkStatus(
-    await octokit.rest.orgs.listForUser({ username, per_page: 100 })
-  );
+  let orgs;
+  try {
+    const response = await octokit.rest.orgs.listForUser({ username, per_page: 100 });
+    orgs = checkStatus(response).data;
+  } catch (error) {
+    if (error.status === 404) {
+      core.info(`User "${username}" not found or is a bot account. Treating as non-member.`);
+      core.setOutput("result", "false");
+      return;
+    }
+    throw error;
+  }
 
   const isMember = orgs.some(({ login }) => login === organization);
 
